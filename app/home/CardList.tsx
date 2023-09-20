@@ -1,28 +1,21 @@
 'use client'
 
 import {
-    Grid,
     Box,
     Heading,
     Center,
 } from '@chakra-ui/react';
-import Card from './Card';
+import Project from './Project';
 
 export default function CardList() {
     return (
         <Box py="5">
-            <Center>
-                <Heading>
-                    Work
-                </Heading>
-            </Center>
-            <Grid w="100vw" gridTemplateColumns="repeat(3, 1fr)" px="10" gridGap="10">
-                {
-                    [1, 2, 3, 4, 5].map(i => (
-                        <Card />
-                    ))
-                }
-            </Grid>
+            <Heading as="h1">Work</Heading>
+            {
+                [1, 2, 3, 4, 5].map(i => (
+                    <Project />
+                ))
+            }
         </Box>
     )
 }

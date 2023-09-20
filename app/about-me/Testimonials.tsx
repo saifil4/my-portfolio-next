@@ -111,10 +111,9 @@ export default function Testimonials() {
                     spacing={{ base: 10, md: 4, lg: 10 }}>
                     <Testimonial>
                         <TestimonialContent>
-                            <TestimonialHeading>Efficient Collaborating</TestimonialHeading>
+                            {/* <TestimonialHeading>Efficient Collaborating</TestimonialHeading> */}
                             <TestimonialText>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor neque sed
-                                imperdiet nibh lectus feugiat nunc sem.
+                                You rarely come across standout talent like Saifil. He expertly filled the role of User Experience Design Intern at Impactrio for my company’s "Impactraction," formerly "Wheel for Change" team. He, with other collaborators, took the idea of the solution and designed, wire framed, created the MVP of the app. Not only did Saifil show initiative in building out our UI/UX architecture from scratch, but he also played a huge role in bringing innovative features from a design perspective.
                             </TestimonialText>
                         </TestimonialContent>
                         <TestimonialAvatar

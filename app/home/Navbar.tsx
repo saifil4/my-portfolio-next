@@ -20,9 +20,9 @@ interface Props {
 
 const Links = [
     {
-        name: 'Home',
-        icon: FaHome,
-        link: '/'
+        name: 'About',
+        icon: FaEnvelope,
+        link: '/about-me'
     },
     {
         name: 'Contact',
@@ -56,7 +56,7 @@ export default function Navbar() {
 
     return (
         <Box px={4} pos="sticky" top="0">
-            <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
+            <Flex h={16} alignItems={'center'} justifyContent={'space-between'} px="5">
                 <IconButton
                     size={'md'}
                     icon={isOpen ? <FaTimes /> : <FaBars />}
@@ -65,7 +65,10 @@ export default function Navbar() {
                     onClick={isOpen ? onClose : onOpen}
                 />
                 <HStack spacing={8} alignItems={'center'} h="full">
-                    <HStack as={'nav'} spacing={4} display={{ base: 'none', md: 'flex' }}>
+                    <Box h="full" py="5" mr="5">
+                        <Image src='/logo.png' h="full" w="auto" />
+                    </Box>
+                    <HStack as={'nav'} spacing={5} display={{ base: 'none', md: 'flex' }}>
                         {Links.map(({ name, icon: Icon, link }) => (
                             <CustomLink href={link}>
                                 <Icon />
@@ -73,17 +76,8 @@ export default function Navbar() {
                             </CustomLink>
                         ))}
                     </HStack>
-                    <Box h="full" py="3">
-                        <Image src='/logo.png' h="full" w="auto" />
-                    </Box>
                 </HStack>
                 <Flex alignItems={'center'}>
-                    <Button
-                        size={'sm'}
-                        mr={4}
-                        leftIcon={<FaPlus />}>
-                        Action
-                    </Button>
                     <Button
                         size={'sm'}
                         leftIcon={<FaFileDownload />}>
