@@ -10,7 +10,8 @@ import {
     Flex,
     useColorModeValue,
     Container,
-} from '@chakra-ui/react'
+} from '@chakra-ui/react';
+import { IProject } from '@/data';
 
 
 interface Props {
@@ -36,7 +37,10 @@ const BlogTags = (props: Props) => {
 
 
 
-const Project = () => {
+const Project = ({ project }: { project: IProject }) => {
+
+    const { name, description, stacks, poster } = project;
+
     return (
         <Container maxW={'7xl'} p="12">
             <Flex
@@ -57,9 +61,7 @@ const Project = () => {
                         <Box textDecoration="none" _hover={{ textDecoration: 'none' }}>
                             <Image
                                 borderRadius="lg"
-                                src={
-                                    'https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=800&q=80'
-                                }
+                                src={poster}
                                 alt="some good alt text"
                                 objectFit="contain"
                             />
@@ -83,20 +85,17 @@ const Project = () => {
                     flexDirection="column"
                     justifyContent="center"
                     marginTop={{ base: '3', sm: '0' }}>
-                    <BlogTags tags={['Engineering', 'Product']} />
+                    <BlogTags tags={stacks} />
                     <Heading marginTop="1">
                         <Text textDecoration="none" _hover={{ textDecoration: 'none' }}>
-                            Blog article title
+                            {name}
                         </Text>
                     </Heading>
                     <Text
                         as="p"
                         marginTop="2"
                         fontSize="lg">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                        Lorem Ipsum has been the industry&apos;s standard dummy text ever since the
-                        1500s, when an unknown printer took a galley of type and scrambled it to make
-                        a type specimen book.
+                        {description}
                     </Text>
                 </Box>
             </Flex>

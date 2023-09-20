@@ -66,7 +66,9 @@ export default function Navbar() {
                 />
                 <HStack spacing={8} alignItems={'center'} h="full">
                     <Box h="full" py="5" mr="5">
-                        <Image src='/logo.png' h="full" w="auto" />
+                        <Link href='/'>
+                            <Image src='/logo.png' h="full" w="auto" />
+                        </Link>
                     </Box>
                     <HStack as={'nav'} spacing={5} display={{ base: 'none', md: 'flex' }}>
                         {Links.map(({ name, icon: Icon, link }) => (

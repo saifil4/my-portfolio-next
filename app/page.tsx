@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Hero from './home/Hero';
-import CardList from './home/CardList';
+import CardList from './home/ProjectsList';
 
 export default function Home() {
   return (
