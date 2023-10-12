@@ -2,7 +2,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Providers } from './provider'
 import { Inter } from 'next/font/google';
-import Navbar from '@/app/home/Navbar';
+import Header from '@/app/home/Header';
 import Footer from './home/Footer';
 
 const inter = Inter({ subsets: ['latin'] })
@@ -21,8 +21,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Providers>
-          <Navbar />
-          {children}
+          <Header />
+          <main style={{ height: 'calc(100% - 120px)', overflow: 'auto' }}>
+            {children}
+          </main>
           <Footer />
         </Providers>
       </body>

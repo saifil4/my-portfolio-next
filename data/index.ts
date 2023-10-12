@@ -27,10 +27,10 @@ export const ProjectsData: Array<IProject> = [
                 url: 'https://serene-heyrovsky-9dffc5.netlify.app/'
             }
         ],
-        poster: './images/agile-board/poster-image.svg',
+        poster: '/images/agile-board/poster-image.svg',
         description: `Front End implementation of a Scrum board built with React and Redux where tasks can be prioritized and labeled based on user's requirements.`,
         stacks: [
-            'React', 'Redux', 'HTML', 'CSS', 'JavaScript', 'Bootsrap', 'React Beautiful dnd'
+            'React', 'Redux', 'JavaScript', 'Bootsrap', 'React Beautiful dnd'
         ],
     },
     {
@@ -47,10 +47,10 @@ export const ProjectsData: Array<IProject> = [
                 url: 'https://covid-tracker-jade-nu.vercel.app/'
             }
         ],
-        poster: './images/covid-tracker/splash.png',
+        poster: '/images/covid-tracker/poster-image.svg',
         description: `Created a COVID-19 tracker by integrating disease.sh API to visualize global stats and vaccination efforts in different parts of the world.`,
         stacks: [
-            'React', 'HTML', 'CSS', 'JavaScript', 'Bootsrap', 'Leaflet JS', 'Disease.sh API'
+            'React', 'JavaScript', 'Bootsrap', 'Leaflet JS', 'Disease.sh API'
         ],
     },
     {

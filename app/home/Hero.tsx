@@ -6,33 +6,36 @@ import {
     Heading,
     Stack,
     Text,
-    useBreakpointValue,
+    Box,
+    VStack,
 } from '@chakra-ui/react';
-import { ReactNode } from 'react';
+import ThemeButton from '@/components/ThemeButton';
+import Link from 'next/link';
 
 
 export default function Hero() {
     return (
-        <Stack
-            minH={'100vh'} direction={{ base: 'column', md: 'row' }}
-            backgroundSize="cover"
-            bgImage="url('/background.jpg')">
-            <Flex p={8} w="full" align={'center'} justify={'center'}>
+        <Box h="full">
+            <Flex p={8} h="full" w="full" align={'center'} justify={'center'}>
                 <Stack spacing={6} w={'full'} maxW={'2xl'}>
                     <Heading color="white" fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}>
-                        Hello
-                        <Text>
-                            I am Saifil Software Developer based in Toronto
+                        <Text textAlign="center">
+                            Hello I am Saifil<br />
+                            Software Developer based in Toronto
                         </Text>
                     </Heading>
-                    <Stack direction={{ base: 'column', md: 'row' }} spacing={4}>
-                        <Button>
-                            Contact me
-                        </Button>
-                        <Button>Download Resume</Button>
-                    </Stack>
+                    <VStack alignItems="center" spacing="7">
+                        <Link href="/work">
+                            <ThemeButton>
+                                Explore my work
+                            </ThemeButton>
+                        </Link>
+                        <Link href="/contact">
+                            <ThemeButton>Contact me</ThemeButton>
+                        </Link>
+                    </VStack>
                 </Stack>
             </Flex>
-        </Stack>
+        </Box>
     )
 }
