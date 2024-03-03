@@ -22,11 +22,11 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Providers>
-          <Header />
-          <main style={{ height: 'calc(100% - 120px)', overflow: 'auto' }}>
+          {/* <Header /> */}
+          <main>
             {children}
           </main>
-          <Footer />
+          {/* <Footer /> */}
         </Providers>
         <Analytics />
       </body>
