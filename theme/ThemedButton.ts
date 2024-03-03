@@ -7,21 +7,12 @@ const ThemedButton: ComponentStyleConfig = {
         py: "3",
         bg: "white",
         color: "black",
-        borderRadius: 0,
-        _after: {
-            content: "''",
-            w: "full",
-            h: "full",
-            border: "1px solid white",
-            transition: "all 0.2s ease-in-out",
-            pos: "absolute",
-            left: "-8px",
-            top: "8px",
-            _hover: {
-                left: "5px",
-                top: "-5px",
-            }
-        },
+        borderRadius: 1,
+        zIndex: 1,
+        _hover: {
+            bg: "#eb4d4b",
+            color: "white",
+        }
     },
     // styles for different sizes ("sm", "md", "lg")
     sizes: {},
