@@ -1,28 +1,27 @@
 import React, { ReactNode } from 'react';
 import Image from 'next/image';
+import { IProject } from '@/data';
 
 interface CardProps {
-    title: string;
-    children: ReactNode;
+    project: IProject;
 }
 
-const Card: React.FC<CardProps> = ({ title, children }) => {
+const Card: React.FC<CardProps> = ({ project }) => {
     return (
-        <div className="rounded overflow-hidden shadow-lg m-4 bg-gray-950 -50 grid grid-cols-4">
-            <div className="col-span-3">
-                <Image
-                    src="https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    height="500"
-                    width="500"
-                    // className="object-cover object-top absolute inset-0 h-full w-full transition duration-200"
-                    alt="thumbnail"
-                />
+        <div className="rounded-lg overflow-hidden drop-shadow-xl m-6 bg-gray-950 -50 grid grid-cols-8">
+            <div className="col-span-5">
+                <img src={project.poster} width="100%" alt="thumbnail" />
             </div>
-            <div className="col-span-1 align-top">
-                <div className="font-bold text-xl mb-2">{title}</div>
-                <p className="text-gray-700 text-base">
-                    {children}
+            <div className="col-span-3 align-middle p-6">
+                <b className="font-bold text-xl mb-2 text-gray-200">
+                    {project.name}
+                </b>
+                <p className=" text-gray-400">
+                    {project.description}
                 </p>
+                {/* <p className="text-gray-700 text-base">
+                    {children}
+                </p> */}
             </div>
 
         </div>

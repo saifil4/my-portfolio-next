@@ -67,7 +67,7 @@ export const ProjectsData: Array<IProject> = [
                 url: 'http://saifilmomin.com/'
             }
         ],
-        poster: './images/portfolio/poster-image.svg',
+        poster: '/images/portfolio/poster-image.svg',
         description: `A website to demonstrate my skills and projects and a medium for people to view my projects and contact me to collaborate on projects.`,
         stacks: [
             'React', 'Chakra UI', 'TypeScript', 'Next JS'
@@ -87,7 +87,7 @@ export const ProjectsData: Array<IProject> = [
                 url: 'https://dotsandboxes.vercel.app/'
             }
         ],
-        poster: './images/lines-and-boxes/splash.png',
+        poster: '/images/lines-and-boxes/splash.png',
         description: 'Lines and boxes is a fun little game you can play with your friends. It comprises of lines you can click to enable them, and the line which closes a box is considered captured which awards 1 point to the player',
         stacks: [
             'React'

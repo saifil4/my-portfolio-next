@@ -7,6 +7,7 @@ import { LampDemo } from '@/components/ui/Lamp';
 // import { Spotlight } from "../ui/spotlight";
 import Card from '@/components/ui/Card';
 import { TextGenerateEffect } from '@/components/ui/TextGenerateEffect';
+import { ProjectsData } from '@/data';
 
 export default function Home() {
   return (
@@ -29,11 +30,12 @@ export default function Home() {
         </div>
       </div>
       <div className='bg-gray-900 p-6' >
-        <h1 className='text-3xl text-gray-100 font-bold'>My work</h1>
-        <Card title='hello' >hello</Card>
-        <Card title='hello' >hello</Card>
-        <Card title='hello' >hello</Card>
-        <Card title='hello' >hello</Card>
+        <h1 className='text-4xl text-gray-100 font-bold'>My work</h1>
+        {
+          ProjectsData.map((project, index) => (
+            <Card project={project} />
+          ))
+        }
       </div>
       <LampDemo />
     </>
