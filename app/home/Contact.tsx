@@ -8,8 +8,8 @@ export default function Contact() {
     return (
         <LampEffect>
             <motion.div
-                initial={{ opacity: 0.5, y: 100 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0.5, y: 200 }}
+                whileInView={{ opacity: 1, y: 50 }}
                 transition={{
                     delay: 0.3,
                     duration: 0.8,
