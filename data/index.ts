@@ -34,26 +34,6 @@ export const ProjectsData: Array<IProject> = [
         ],
     },
     {
-        name: 'Covid-Tracker',
-        links: [
-            {
-                name: 'Git',
-                icon: '',
-                url: 'https://github.com/saifil4/covid-tracker'
-            },
-            {
-                name: 'Live',
-                icon: '',
-                url: 'https://covid-tracker-jade-nu.vercel.app/'
-            }
-        ],
-        poster: '/images/covid-tracker/poster-image.svg',
-        description: `Created a COVID-19 tracker by integrating disease.sh API to visualize global stats and vaccination efforts in different parts of the world.`,
-        stacks: [
-            'React', 'JavaScript', 'Bootsrap', 'Leaflet JS', 'Disease.sh API'
-        ],
-    },
-    {
         name: 'Portfolio Website',
         links: [
             {

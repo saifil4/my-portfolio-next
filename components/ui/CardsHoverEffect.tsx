@@ -4,26 +4,22 @@ import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
 
-export const HoverEffect = ({
-    items,
-    className,
-}: {
+type HoverEffectProps = {
     items: {
         title: string;
         description: string;
         link: string;
-    }[];
-    className?: string;
+    }[]
+};
+
+
+export const HoverEffect: React.FC<HoverEffectProps> = ({
+    items
 }) => {
     let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
     return (
-        <div
-            className={cn(
-                "grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3  py-10",
-                className
-            )}
-        >
+        <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3  py-10">
             {items.map((item, idx) => (
                 <Link
                     href={item?.link}
@@ -51,7 +47,15 @@ export const HoverEffect = ({
                     </AnimatePresence>
                     <Card>
                         <CardTitle>{item.title}</CardTitle>
-                        <CardDescription>{item.description}</CardDescription>
+                        <CardDescription>
+                            hello
+                            {/* <ul>
+                                <li>1</li>
+                                <li>1</li>
+                                <li>1</li>
+                                <li>1</li>
+                            </ul> */}
+                        </CardDescription>
                     </Card>
                 </Link>
             ))}

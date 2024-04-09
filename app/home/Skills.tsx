@@ -3,7 +3,7 @@ import Title from "@/components/ui/Title";
 
 export function Skills() {
     return (
-        <div className="max-w-5xl mx-auto p-12">
+        <div className="h-[calc(100vh_-_2rem)] max-w-5xl mx-auto md:p-12 px-4 py-6">
             <Title>What I can do</Title>
             <HoverEffect items={projects} />
         </div>
