@@ -11,9 +11,9 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <About />
       <Work />
       <Skills />
-      <About />
       <Contact />
     </>
   );

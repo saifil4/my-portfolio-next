@@ -1,42 +1,51 @@
 import Title from "@/components/ui/Title";
-
-import github from '@/public/github.svg';
+import { OuterContainer, FlexContainer, MaxWidthContainer } from "@/components/layouts/Containers";
+import GradientContainer from "@/components/layouts/GradientContainer";
 
 type Project = {
     title: string;
-    description: string;
     skills: string[];
 };
 
 export const projects: Project[] = [
     {
-        title: "Design",
-        description:
-            "A technology company that builds economic infrastructure for the internet.",
-        skills: ["Figma", "Adobe XD", "Photoshop", "Illustrator", "InDesign"]
+        title: "Languages",
+        skills: ["JavaScript", "TypeScript", "SQL"]
 
     },
     {
-        title: "Frontend",
-        description:
-            "A streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.",
-        skills: ["HTML", "CSS", "JavaScript", "React", "Next.js", "Tailwind CSS"]
+        title: "Frameworks",
+        skills: ["Next JS", "Electron", "React",]
     },
     {
-        title: "Backend",
-        description:
-            "A multinational technology company that specializes in Internet-related services and products.",
-        skills: ["Node.js", "Express", "MongoDB", "Firebase", "GraphQL", "REST API"]
+        title: "UI Libraries",
+        skills: ["Chakra JS", "D3.js", "Tailwind CSS"]
+    },
+    {
+        title: "State Management",
+        skills: ["Context API", "Recoil", "Redux", "RxJS"]
+    },
+    {
+        title: "Server",
+        skills: ["Node.js", "Express"]
+    },
+    {
+        title: "Database",
+        skills: ["MySQL", "PostgresSQL"]
     }
 ];
 
 
 export function Skills() {
     return (
-        <div className="h-[calc(100vh_-_2rem)] max-w-5xl mx-auto md:p-12 px-4 py-6">
-            <Title>My Stack</Title>
-            <ProjectList projects={projects} />
-        </div>
+        <OuterContainer>
+            <FlexContainer>
+                <MaxWidthContainer>
+                    <Title>What I work with</Title>
+                    <ProjectList projects={projects} />
+                </MaxWidthContainer>
+            </FlexContainer>
+        </OuterContainer>
     );
 }
 
@@ -65,12 +74,10 @@ const ProjectList: React.FC<{ projects: Project[] }> = ({ projects }) => {
 
 const Card = ({ children }: { children: React.ReactNode }) => {
     return (
-        <div
-            className="rounded-xl h-full w-full p-4 overflow-hidden bg-gradient-to-b from-slate-900 to-black shadow-lg text-white border border-slate-900"
-        >
-            <div className="relative z-50">
-                <div className="p-4">{children}</div>
-            </div>
+        <div className="h-full w-full">
+            <GradientContainer>
+                <div className="p-6">{children}</div>
+            </GradientContainer>
         </div>
     );
 };
