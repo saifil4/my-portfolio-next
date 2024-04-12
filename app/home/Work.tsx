@@ -8,7 +8,7 @@ import Title from '@/components/ui/Title';
 
 export default function Work() {
     return (
-        <div className='bg-gray-900 md:p-12 p-6' >
+        <div className='bg-slate-950 md:p-12 p-6' >
             <Title >Projects</Title>
             <br />
             <div className="flex justify-center">

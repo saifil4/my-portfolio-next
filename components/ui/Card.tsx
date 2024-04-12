@@ -9,7 +9,7 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({ project }) => {
     return (
 
-        <div className="rounded-lg overflow-hidden drop-shadow-xl md:mb-6 mb-6 bg-gray-950">
+        <div className="rounded-lg overflow-hidden md:mb-6 mb-6 linear-gradient bg-gradient-to-b from-black to-slate-900 drop-shadow-xl border border-slate-900">
             <div>
                 <img src={project.poster} width="100%" alt="thumbnail" />
             </div>
@@ -34,10 +34,6 @@ const Card: React.FC<CardProps> = ({ project }) => {
                         Live
                     </button>
                 </div>
-
-                {/* <p className="text-gray-700 text-base">
-                    {children}
-                </p> */}
             </div>
 
         </div>

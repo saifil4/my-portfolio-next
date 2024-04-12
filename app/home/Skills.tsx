@@ -44,7 +44,7 @@ export function Skills() {
 const ProjectList: React.FC<{ projects: Project[] }> = ({ projects }) => {
 
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-10 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-10 gap-6">
             {projects.map((item) => (
                 <Card>
                     <h4 className="text-zinc-400 font-bold text-3xl tracking-wide mb-3">
@@ -52,7 +52,7 @@ const ProjectList: React.FC<{ projects: Project[] }> = ({ projects }) => {
                     </h4>
                     <ul>
                         {item.skills.map((skill) => (
-                            <li key={skill} className="text-zinc-300 text-lg">
+                            <li key={skill} className="text-zinc-500 text-lg">
                                 {skill}
                             </li>
                         ))}
@@ -66,7 +66,7 @@ const ProjectList: React.FC<{ projects: Project[] }> = ({ projects }) => {
 const Card = ({ children }: { children: React.ReactNode }) => {
     return (
         <div
-            className="rounded-2xl h-full w-full p-4 overflow-hidden bg-gray-900 shadow-lg"
+            className="rounded-xl h-full w-full p-4 overflow-hidden bg-gradient-to-b from-slate-900 to-black shadow-lg text-white border border-slate-900"
         >
             <div className="relative z-50">
                 <div className="p-4">{children}</div>

@@ -1,4 +1,5 @@
-import Title from "@/components/ui/Title";
+'use client'
+import Button from "@/components/ui/Button";
 
 export function About() {
     return (
@@ -6,31 +7,44 @@ export function About() {
             <div className="flex justify-center">
                 <div className="grid grid-cols-2 grid-rows-2 gap-4 text-white h-full max-w-3xl">
                     <div className="row-span-2">
-                        <div className="rounded-xl m-3 w-full h-full border-white/[0.2] border">
-
-                        </div>
+                        <Box>
+                            <img src="/images/saifil.png" alt="me" className="h-lg" />
+                            <div className='flex justify-center items-center gap-1 flex-col mt-2'>
+                                <p className="font-bold text-xl">Saifil Momin</p>
+                                <a className="underline text-cyan-400" href="mailto:saifilmomin4@gmail.com">saifilmomin4@gmail.com</a>
+                                <Button onClick={() => { }} text='Download Resume' />
+                            </div>
+                        </Box>
                     </div>
                     <div >
-                        <div className="rounded-xl m-3 w-full h-full border-white/[0.2] border p-6">
+                        <Box>
                             <h1 className="text-3xl font-bold mb-5">About</h1>
                             <p>
                                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis blanditiis architecto iste. Sit distinctio a sapiente repudiandae beatae eaque. Dolorum unde provident eum dolore debitis pariatur, quis assumenda rem voluptatem.
                             </p>
-                        </div>
+                        </Box>
                     </div>
                     <div className="col-start-2">
-                        <div className="rounded-xl m-3 w-full h-full border-white/[0.2] border p-6">
+                        <Box>
                             <h1 className="text-3xl font-bold mb-5">Recent Experience</h1>
                             <ul>
                                 <li>Frontend Developer at Company</li>
                                 <li>Backend Developer at Company</li>
                                 <li>Fullstack Developer at Company</li>
                             </ul>
-                        </div>
+                        </Box>
                     </div>
                 </div>
             </div>
 
+        </div>
+    );
+}
+
+const Box = ({ children }: { children: React.ReactNode }) => {
+    return (
+        <div className="rounded-xl m-3 w-full h-full shadow p-6 bg-black bg-opacity-15">
+            {children}
         </div>
     );
 }
