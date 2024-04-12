@@ -5,6 +5,7 @@ import Hero from './home/Hero';
 import Contact from './home/Contact';
 import Work from './home/Work';
 import { Skills } from "./home/Skills";
+import About from "./home/About";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Hero />
       <Work />
       <Skills />
+      <About />
       <Contact />
     </>
   );

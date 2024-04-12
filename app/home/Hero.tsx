@@ -2,6 +2,8 @@
 import { Spotlight } from '@/components/ui/Spotlight';
 import React from "react";
 import Button from '@/components/ui/Button';
+import GitHubIcon from '@/components/icons/Github';
+import LinkedIcon from '@/components/icons/LinkedIn';
 
 export default function Hero() {
     return (
@@ -21,6 +23,11 @@ export default function Hero() {
                 <div className='flex justify-center'>
                     <Button onClick={() => { }} text='Download Resume' />
                 </div>
+                <div className='flex justify-center mt-5 gap-3'>
+                    <GitHubIcon size={24} color='white' />
+                    <LinkedIcon size={24} color='white' />
+                </div>
+               
             </div>
         </div>
     );
