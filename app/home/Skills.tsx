@@ -45,14 +45,14 @@ const ProjectList: React.FC<{ projects: Project[] }> = ({ projects }) => {
 
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-10 gap-6">
-            {projects.map((item) => (
-                <Card>
-                    <h4 className="text-zinc-400 font-bold text-3xl tracking-wide mb-3">
+            {projects.map((item, j) => (
+                <Card key={j}>
+                    <h4 className="text-zinc-400 font-bold text-2xl tracking-wide mb-3">
                         {item.title}
                     </h4>
                     <ul>
-                        {item.skills.map((skill) => (
-                            <li key={skill} className="text-zinc-500 text-lg">
+                        {item.skills.map((skill, i) => (
+                            <li key={i} className="text-zinc-500 text-lg font-light">
                                 {skill}
                             </li>
                         ))}
