@@ -36,12 +36,13 @@ export const projects: Project[] = [
 ];
 
 
-export function Skills() {
+export default function Skills() {
     return (
         <OuterContainer>
             <FlexContainer>
                 <MaxWidthContainer>
                     <Title>What I work with</Title>
+                    <br/>
                     <ProjectList projects={projects} />
                 </MaxWidthContainer>
             </FlexContainer>
@@ -53,15 +54,15 @@ export function Skills() {
 const ProjectList: React.FC<{ projects: Project[] }> = ({ projects }) => {
 
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-10 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {projects.map((item, j) => (
                 <Card key={j}>
-                    <h4 className="text-zinc-400 font-bold text-2xl tracking-wide mb-3">
+                    <h4 className="text-zinc-400 font-bold text-xl mb-3">
                         {item.title}
                     </h4>
                     <ul>
                         {item.skills.map((skill, i) => (
-                            <li key={i} className="text-zinc-500 text-lg font-light">
+                            <li key={i} className="text-zinc-400 font-light">
                                 {skill}
                             </li>
                         ))}
