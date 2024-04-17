@@ -9,14 +9,30 @@ export function About() {
         <OuterContainer>
             <FlexContainer>
                 <MaxWidthContainer>
-                    <div className="grid md:grid-cols-2 md:grid-rows-2 grid-cols-1 gap-4 text-white h-full">
-                        <div className="md:row-span-2">
+                    <div className="grid md:grid-cols-2 md:grid-rows-5 grid-cols-1 gap-4 text-white h-full">
+                        <div className="row-span-4">
                             <Box>
                                 <img src="/images/saifil.png" alt="me" className="h-lg" />
+                            </Box>
+                        </div>
+                        <div className="col-start-1 row-start-5">
+                            <Box>
+                                <Button onClick={() => { }} text='Download Resume' />
+                            </Box>
+                        </div>
+                        <div className="row-span-3 col-start-2 row-start-1">
+                            <Box>
+                                <p>
+                                    Hi, I am Saifil, A Front-end developer based in Toronto. I have 4 years of experience working with start-ups, building and delivering quality web products built in JavaScript and Frameworks like React and Angular. I love trying out new things and am constantly learning. Apart from my work, I love playing chess and ping pong and hold an interest in sustainable development, especially in the space of architecture.
+                                </p>
+                            </Box>
+                        </div>
+                        <div className="row-span-2 col-start-2 row-start-4">
+                            <Box>
                                 <div className='flex justify-center items-center gap-1 flex-col mt-2'>
                                     <p className="font-bold text-xl">Saifil Momin</p>
                                     <a className="underline text-cyan-400" href="mailto:saifilmomin4@gmail.com">saifilmomin4@gmail.com</a>
-                                    <Button onClick={() => { }} text='Download Resume' />
+
                                 </div>
 
                                 <br />
@@ -24,24 +40,6 @@ export function About() {
                                     <GitHubIcon size={24} color='white' />
                                     <LinkedInIcon size={24} color='white' />
                                 </div>
-                            </Box>
-                        </div>
-                        <div >
-                            <Box>
-                                <h1 className="text-3xl font-bold mb-5">About</h1>
-                                <p>
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis blanditiis architecto iste. Sit distinctio a sapiente repudiandae beatae eaque. Dolorum unde provident eum dolore debitis pariatur, quis assumenda rem voluptatem.
-                                </p>
-                            </Box>
-                        </div>
-                        <div className="md:col-start-2">
-                            <Box>
-                                <h1 className="text-3xl font-bold mb-5">Recent Experience</h1>
-                                <ul>
-                                    <li>Frontend Developer at Company</li>
-                                    <li>Backend Developer at Company</li>
-                                    <li>Fullstack Developer at Company</li>
-                                </ul>
                             </Box>
                         </div>
                     </div>
