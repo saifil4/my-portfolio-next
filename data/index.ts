@@ -30,7 +30,7 @@ export const ProjectsData: Array<IProject> = [
         poster: '/images/agile-board/poster-image.svg',
         description: `Front End implementation of a Scrum board built with React and Redux where tasks can be prioritized and labeled based on user's requirements.`,
         stacks: [
-            'React', 'Redux', 'JavaScript', 'Bootsrap', 'React Beautiful dnd'
+            'React', 'Redux', 'JavaScript', 'React Bootstrap', 'React Beautiful dnd'
         ],
     },
     {

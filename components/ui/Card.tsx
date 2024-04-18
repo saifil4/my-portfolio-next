@@ -15,12 +15,21 @@ const Card: React.FC<CardProps> = ({ project }) => {
                 <img src={project.poster} width="100%" alt="thumbnail" />
             </div>
             <div className=" p-6">
-                <b className="font-bold text-xl mb-2 text-gray-200">
+                <b className="font-bold text-lg mb-2 text-gray-200">
                     {project.name}
                 </b>
                 <p className=" text-gray-400">
                     {project.description}
                 </p>
+                <div className='my-2'>
+                    {
+                        project.stacks.map((stack, i) => (
+                            <div key={i} className="inline-block text-gray-400 text-sm font-normal mr-1 mb-1 bg-gray-800 p-1 rounded-lg">
+                                {stack}
+                            </div>
+                        ))
+                    }
+                </div>
                 <div className='flex gap-3 justify-end mt-5'>
                     <button type="button" className="py-2 px-4 max-w-md flex justify-center items-center bg-gray-600 hover:bg-gray-700 text-white text-center text-base font-semibold shadow-md focus:outline-none rounded-lg">
                         <GitHubIcon />GitHub

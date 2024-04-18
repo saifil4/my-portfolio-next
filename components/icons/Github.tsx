@@ -5,7 +5,7 @@ interface GitHubProps {
     color?: string;
 }
 
-const GitHubIcon: React.FC<GitHubProps> = ({ size = 24, color = 'black' }) => {
+const GitHubIcon: React.FC<GitHubProps> = ({ size = 20, color = 'white' }) => {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -13,6 +13,7 @@ const GitHubIcon: React.FC<GitHubProps> = ({ size = 24, color = 'black' }) => {
             height={size}
             viewBox="0 0 24 24"
             fill={color}
+            className='mr-2'
         >
             <path
                 fillRule="evenodd"
