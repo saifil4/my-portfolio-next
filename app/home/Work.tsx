@@ -9,19 +9,19 @@ import { OuterContainer, FlexContainer, MaxWidthContainer } from "@/components/l
 
 export default function Work() {
     return (
-        <OuterContainer>
+        <>
             <Title >Projects</Title>
             <br />
             <FlexContainer>
                 <MaxWidthContainer>
-                    <div className="grid md:grid-cols-2 grid-cols-1 gap-6">
+                    <div className="grid md:grid-cols-2 grid-cols-1 gap-10">
                         {ProjectsData.map((project, index) => (
                             <Card key={index} project={project} />
                         ))}
                     </div>
                 </MaxWidthContainer>
             </FlexContainer>
-        </OuterContainer>
+        </>
 
     );
 }

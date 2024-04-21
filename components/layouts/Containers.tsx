@@ -17,7 +17,7 @@ export const FlexContainer: React.FC<ContainerProps> = ({ children, className })
 
 export const MaxWidthContainer: React.FC<ContainerProps> = ({ children }) => {
     return (
-        <div className="max-w-4xl">
+        <div className="max-w-5xl">
             {children}
         </div>
     );

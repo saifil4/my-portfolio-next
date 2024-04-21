@@ -38,7 +38,7 @@ export const projects: Project[] = [
 
 export default function Skills() {
     return (
-        <OuterContainer>
+        <>
             <Title>What I work with</Title>
             <br />
             <FlexContainer>
@@ -46,7 +46,7 @@ export default function Skills() {
                     <ProjectList projects={projects} />
                 </MaxWidthContainer>
             </FlexContainer>
-        </OuterContainer>
+        </>
     );
 }
 

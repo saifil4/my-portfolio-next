@@ -6,6 +6,7 @@ import Work from './home/Work';
 import Skills from "./home/Skills";
 import About from "./home/About";
 import Testimonials from "./home/Testimonials";
+import { OuterContainer } from "@/components/layouts/Containers";
 
 
 export default function Home() {
@@ -16,9 +17,11 @@ export default function Home() {
         <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
         <Hero />
       </div>
-      <Work />
-      <Skills />
-      <Testimonials/>
+      <OuterContainer className="bg-slate-950">
+        <Work />
+        <Skills />
+      </OuterContainer>
+      <Testimonials />
       <About />
     </>
   );
