@@ -22,11 +22,3 @@ export const MaxWidthContainer: React.FC<ContainerProps> = ({ children }) => {
         </div>
     );
 };
-
-export const OuterContainer: React.FC<ContainerProps> = ({ children, className }) => {
-    return (
-        <div className={`my-5 md:p-12 px-4 ${className}`}>
-            {children}
-        </div>
-    );
-};

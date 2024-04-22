@@ -30,10 +30,20 @@ export const ProjectsData: Array<IProject> = [
         ]
     },
     {
-        name: 'Lines and Boxes',
+        name: 'Reactive Charts',
         github: 'https://github.com/saifil4/dotsandboxes',
         live: 'https://dotsandboxes.vercel.app/',
-        poster: '/images/lines-and-boxes/splash.png',
+        poster: '/images/covid-tracker/poster-image.svg',
+        description: 'Reactive charts is a declarative approach to creating charts using React and D3.js.',
+        stacks: [
+            'React', 'D3.js', 'TypeScript', 'Framer Motion'
+        ],
+    },
+    {
+        name: 'Covid Tracker',
+        github: 'https://github.com/saifil4/dotsandboxes',
+        live: 'https://dotsandboxes.vercel.app/',
+        poster: '/images/covid-tracker/poster-image.svg',
         description: 'Lines and boxes is a fun little game you can play with your friends. It comprises of lines you can click to enable them, and the line which closes a box is considered captured which awards 1 point to the player',
         stacks: [
             'React'

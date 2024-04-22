@@ -1,5 +1,5 @@
 import Title from "@/components/ui/Title";
-import { OuterContainer, FlexContainer, MaxWidthContainer } from "@/components/layouts/Containers";
+import { MaxWidthContainer } from "@/components/layouts/Containers";
 import GradientContainer from "@/components/layouts/GradientContainer";
 
 type Project = {
@@ -41,11 +41,11 @@ export default function Skills() {
         <>
             <Title>What I work with</Title>
             <br />
-            <FlexContainer>
+            <div className="flex flex-col justify-center items-center bg-slate-200 rounded-lg p-6">
                 <MaxWidthContainer>
                     <ProjectList projects={projects} />
                 </MaxWidthContainer>
-            </FlexContainer>
+            </div>
         </>
     );
 }
@@ -57,12 +57,12 @@ const ProjectList: React.FC<{ projects: Project[] }> = ({ projects }) => {
         <div className="grid grid-cols-2 md:grid-cols-3 md:gap-6 gap-4">
             {projects.map((item, j) => (
                 <Card key={j}>
-                    <h4 className="text-gray-400 font-semibold text-lg mb-1">
+                    <h4 className="text-gray-900 font-semibold text-lg mb-1">
                         {item.title}
                     </h4>
                     <ul>
                         {item.skills.map((skill, i) => (
-                            <li key={i} className="text-gray-300 font-normal leading[1.5] text-sm">
+                            <li key={i} className="text-gray-700 font-normal leading[1.5] text-sm">
                                 {skill}
                             </li>
                         ))}
@@ -76,9 +76,9 @@ const ProjectList: React.FC<{ projects: Project[] }> = ({ projects }) => {
 const Card = ({ children }: { children: React.ReactNode }) => {
     return (
         <div className="h-full w-full">
-            <GradientContainer>
-                <div className="md:p-6 p-4">{children}</div>
-            </GradientContainer>
+            <div className="md:p-6 p-4 bg-white shadow rounded-lg">
+                {children}
+            </div>
         </div>
     );
 };
