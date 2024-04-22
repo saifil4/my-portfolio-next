@@ -12,8 +12,8 @@ export default function Work() {
         <>
             <Title >Projects</Title>
             <br />
-            <div className="flex flex-col justify-center items-center bg-black rounded-lg">
-                <div className="grid md:grid-cols-2 grid-cols-1 gap-10 p-12">
+            <div className="flex flex-col justify-center items-center bg-primary-light rounded-lg">
+                <div className="grid md:grid-cols-2 grid-cols-1 gap-10 md:p-12 p-4">
                     {ProjectsData.map((project, index) => (
                         <Card key={index} project={project} />
                     ))}

@@ -1,6 +1,5 @@
 import React from 'react';
 import { InfiniteMovingCards } from '@/components/layouts/moving-cards';
-import { OuterContainer, FlexContainer, MaxWidthContainer } from "@/components/layouts/Containers";
 import Title from '@/components/ui/Title';
 
 const testimonials = [
