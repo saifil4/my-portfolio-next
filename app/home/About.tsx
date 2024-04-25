@@ -10,7 +10,7 @@ export function About() {
             <MaxWidthContainer>
                 <div className="grid md:grid-cols-2 md:grid-rows-4 grid-cols-1 gap-4 text-white h-full">
                     <div className="row-span-4">
-                        <Box className="bg-white">
+                        <Box className="bg-gradient-to-br from-accent-2 to-primary-lighter drop-shadow text-black">
                             <img src="/images/saifil.png" alt="me" />
                         </Box>
                     </div>
@@ -22,19 +22,17 @@ export function About() {
                         </Box>
                     </div>
                     <div className="md:row-span-2 md:col-start-2 md:row-start-3">
-                        <Box className="bg-primary-light ">
-                            <div className="bg-slate-50 rounded-lg p-3 h-full">
-                                <div className='flex justify-center items-center gap-5 flex-col h-full text-primary-dark'>
-                                    <p className="font-bold text-xl">Saifil Momin</p>
-                                    <a className="underline" href="mailto:saifilmomin4@gmail.com">saifilmomin4@gmail.com</a>
-                                    <div className='flex justify-center gap-3'>
-                                        <a target="blank" href="https://github.com/saifil4/">
-                                            <GitHubIcon size={24} color='white' />
-                                        </a>
-                                        <a href="https://www.linkedin.com/in/saifil-momin/">
-                                            <LinkedInIcon size={24} color='white' />
-                                        </a>
-                                    </div>
+                        <Box className="bg-gradient-to-br from-accent-2 to-primary-lighter drop-shadow text-black">
+                            <div className='flex justify-center items-center gap-5 flex-col h-full'>
+                                <p className="font-bold text-xl">Saifil Momin</p>
+                                <a className="underline" href="mailto:saifilmomin4@gmail.com">saifilmomin4@gmail.com</a>
+                                <div className='flex justify-center gap-3'>
+                                    <a target="blank" href="https://github.com/saifil4/">
+                                        <GitHubIcon size={24} color='white' />
+                                    </a>
+                                    <a href="https://www.linkedin.com/in/saifil-momin/">
+                                        <LinkedInIcon size={24} color='white' />
+                                    </a>
                                 </div>
                             </div>
                         </Box>

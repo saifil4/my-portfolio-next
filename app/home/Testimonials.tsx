@@ -31,15 +31,32 @@ Wish him all the best for his higher studies, I am sure he will do well in his c
 const Testimonials = () => {
     return (
         <div className='my-24'>
-            <Title>Why me</Title>
-            <InfiniteMovingCards
-                items={testimonials}
-                direction="right"
-                speed="slow"
-            />
+            <Title className='text-white mb-5'>Why me</Title>
+            <div className='grid grid-cols-3 gap-3'>
+
+                {
+                    testimonials.map((testimonial, index) => (
+                        <Card key={index} quote={testimonial.quote} name={testimonial.name} title={testimonial.title} />
+                    ))
+                }
+            </div>
         </div>
 
     );
 };
+
+const Card = ({ quote, name, title }: { quote: string, name: string, title: string }) => {
+    return (
+        <div className="bg-white p-8 rounded-lg shadow-lg text-slate-800">
+            <p className="text-sm">{quote}</p>
+            <div className="flex justify-end items-center gap-4 mt-4">
+                <div>
+                    <p className=" font-bold">{name}</p>
+                    <p >{title}</p>
+                </div>
+            </div>
+        </div>
+    )
+}
 
 export default Testimonials;
